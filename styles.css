@@ -1,0 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --very_dark_blue: hsl(238, 29%, 16%);
+    --soft_red: hsl(14, 88%, 65%);
+    --soft_violet:  hsl(273, 75%, 66%);
+    --dark_violet:  hsla(255, 55%, 50%, 0.8);
+    --very_dark_grayish_blue: hsl(237, 12%, 33%);
+    --dark_grayish_blue: hsl(240, 6%, 50%);
+    --light_grayish_blue: hsl(240, 5%, 91%);
+    --white: #fff;
+}
+html {
+    font-size: 12px;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--soft_violet) 0%, var(--dark_violet) 50%) fixed;
+}
+.container {
+    display: grid;  
+}
+.container__items {
+    background-color:var(--white);
+    margin: 13.5rem 1rem 4rem 1rem;
+    padding-bottom: 4rem;
+    border-radius: 1.5rem;
+    color: var(--dark_grayish_blue);
+}
+.container__image {
+    min-width: 16rem;
+    max-width: 22rem;
+    object-fit: cover;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    filter: drop-shadow(0 2em 0  var(--light_grayish_blue));
+}
+h1 {
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--very_dark_blue);
+}
+.item .question {
+    padding: 1rem;
+}
+.item .answer {
+    display: none;
+    padding-left: 1rem;
+    padding-right: 4rem;
+}
+ hr {
+    margin: 0 1rem;
+    border-color: var(--light_grayish_blue);
+    opacity: 0.4;
+}
+.question::after {
+    content: url('images/icon-arrow-down.svg');
+    float: right;
+}
+.question:hover {
+    cursor: pointer;
+    color: var(--soft_red);
+}
+.active {
+    font-weight: 700;
+}
+.active::after {
+    content: url('images/icon-arrow-down.svg');
+    float: right;
+    transform: rotateX(180deg);
+}
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1000px) {
+   .container__items {
+    min-width: 60rem;
+    max-width: 75rem;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem 4rem 1rem 24rem;
+   }
+   h1 {
+    padding: 2rem 1rem;
+    text-align: left;
+   }
+   .container__image {
+    min-width: 26rem;
+    position: fixed;
+    top: 50%;
+    left: 27%;
+    filter: drop-shadow(0 4em 0  var(--light_grayish_blue));
+}   
+}
