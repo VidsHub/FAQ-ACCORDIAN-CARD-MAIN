@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-card-anImWBHMeR]
-- Live Site URL: [https://vidshub.github.io/FAQ-ACCORDIAN-CARD-MAIN/]
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-card-anImWBHMeR)
+- Live Site URL: [Live site URL](https://vidshub.github.io/FAQ-ACCORDIAN-CARD-MAIN/)
 
 ## My process
 
