@@ -13,10 +13,10 @@
 }
 html {
     font-size: 12px;
-    min-height: 100%;
 }
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     background: linear-gradient(var(--soft_violet) 0%, var(--dark_violet) 50%) fixed;
 }
@@ -25,22 +25,29 @@ body {
 }
 .container__items {
     background-color:var(--white);
-    margin: 13.5rem 1rem 4rem 1rem;
+    margin: 13.5rem 1.5rem 4rem 1.5rem;
     padding-bottom: 4rem;
     border-radius: 1.5rem;
     color: var(--dark_grayish_blue);
+    font-size: 1.1rem;
 }
-.container__image {
-    min-width: 16rem;
+.image__container-desktop {
+    display: none;
+}
+.image__container-mobile {
+    display: block;
+    min-width: 20rem;
     max-width: 22rem;
     object-fit: cover;
     position: absolute;
-    top: 20%;
+    top: 21.5%;
     left: 50%;
     transform: translate(-50%, -50%);   
-    filter: drop-shadow(0 2em 0  var(--light_grayish_blue));
+    filter: drop-shadow(0 2.5em 0  var(--light_grayish_blue));
 }
 h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
     padding-top: 10rem;
     text-align: center;
     color: var(--very_dark_blue);
@@ -77,9 +84,39 @@ h1 {
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
+    .image__container-mobile {
+        display: none;
+    }  
+    .image__container-desktop {
+        display: block;
+    }
+    .image-woman-desktop {
+        width: 100%;
+        max-width: 24rem;;
+        position: absolute;
+        left: calc(100vw - 75%);
+        top: 50%;
+        transform: translate(-50%, -50%);   
+    }
+    .image-box {
+        width: 100%;
+        max-width: 10rem;
+        position: absolute;
+        top: 54%;
+        left: calc(100vw - 83%);
+        transform: translate(-50%, -50%);
+    }
+    .image-desktop-background {
+        width: 100%;
+        max-width: 45rem;
+        position: absolute;
+        top: 50%;
+        left: calc(100vw - 85%);
+        transform: translate(-50%, -50%);
+    }
    .container__items {
-    min-width: 60rem;
+    min-width: 70rem;
     max-width: 75rem;
     align-self: center;
     justify-self: center;
@@ -88,12 +125,5 @@ h1 {
    h1 {
     padding: 2rem 1rem;
     text-align: left;
-   }
-   .container__image {
-    min-width: 26rem;
-    position: fixed;
-    top: 50%;
-    left: 27%;
-    filter: drop-shadow(0 4em 0  var(--light_grayish_blue));
-}   
+    } 
 }
